@@ -38,7 +38,7 @@
 
   <body>
     <a-scene
-      arjs
+      arjs="sourceWidth: 1024; sourceHeight: 776; displayWidth: 1024; displayHeight: 776;"
       embedded
       renderer="logarithmicDepthBuffer: true;"
       vr-mode-ui="enabled: false"
@@ -65,6 +65,10 @@
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
         id="markerA"
+        smooth="true"
+        smoothCount="50"
+        smoothTolerance="0.1"
+        smoothThreshold="1000"
       >
       <!-- this is a commment: under id replace 1s2s with filename inside the inverted commas, make sure the -model is there immediately behind the filename,
         under id replace 1s2s with id name from a-asset-item above inside the inverted commas, make sure the # is there immediately in front of the filename,
