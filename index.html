@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jacksonkoh8/AR.js@99bda004452549e8a7576b9e7afc26992aa0104e/aframe/build/aframe-ar.js"></script>
     <script src="gesture-detector.js"></script>
     <script src="gesture-handler.js"></script>
     <!-- this is a commment: you can remove <script src="aframe-extras.loaders.min.js"></script> if your model is not animated, it is also fine to just leave it
@@ -78,6 +78,14 @@
         smoothTolerance="0.1"
         smoothThreshold="1000"
       >
+        
+      <a-sky 
+        id=sky
+        color="#C0C0C0"
+        opacity="0"
+      >
+      </a-sky>        
+        
       <!-- this is a commment: under id replace 1s2s with filename inside the inverted commas, make sure the -model is there immediately behind the filename,
         under id replace 1s2s with id name from a-asset-item above inside the inverted commas, make sure the # is there immediately in front of the filename,
         you can leave position unchanged, but you can modify the x y z coordinates to adjust where your model appears above the Hiro Marker, if necessary,
@@ -93,12 +101,7 @@
           gesture-handler         
         >
         </a-entity>
-      <a-sky 
-        id=sky
-        color="#C0C0C0"
-        opacity="0"
-      >
-      </a-sky>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
